@@ -1,0 +1,12 @@
+formatter.name: pretty
+#formatter.name nyan.cat
+#extensions:
+#    - PhpSpec\NyanFormattersExtension\Extension
+
+suites:
+  twigform_suite:
+    namespace: Hum2\TwigForm
+    psr4_prefix: Hum2\TwigForm
+    src_path: src
+    spec_path: tests
+    spec_prefix: spec

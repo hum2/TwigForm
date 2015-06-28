@@ -1,0 +1,30 @@
+{
+  "name": "hum2/twig-form",
+  "description": "Form Extension for Twig.",
+  "keywords": [
+    "twig",
+    "form"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "hum2",
+      "email": "hum2.dmg@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.2.4"
+    "twig/twig": "~1.0",
+    "aura/session": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hum2\\TwigForm\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}
