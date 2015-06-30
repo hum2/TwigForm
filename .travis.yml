@@ -10,15 +10,14 @@ php:
   - nightly
 
 allow_failures:
-    - php: nightly
-
-env:
-  - TWIG_EXT=no
-  - TWIG_EXT=yes
+  - php: hhvm
+  - php: nightly
 
 before_script:
-  - if [ "$TWIG_EXT" == "yes" ]; then sh -c "cd ext/twig && phpize && ./configure --enable-twig && make && sudo make install"; fi
-  - if [ "$TWIG_EXT" == "yes" ]; then echo "extension=twig.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`; fi
+  - composer install --dev
+
+script:
+  - vendor/bin/phpspec run -v
 
 matrix:
   exclude:
