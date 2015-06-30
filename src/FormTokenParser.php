@@ -44,7 +44,7 @@ class FormTokenParser extends \Twig_TokenParser
         $arguments = $this->parser->getExpressionParser()->parseArguments(true, false);
 
         $stream->expect(\Twig_Token::BLOCK_END_TYPE);
-        $body = $this->parser->subparse([$this, 'decideBlockEnd'], true);
+        $body = $this->parser->subparse(array($this, 'decideBlockEnd'), true);
 
         $stream->expect(\Twig_Token::BLOCK_END_TYPE);
 
