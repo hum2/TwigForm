@@ -19,9 +19,3 @@ before_script:
 script:
   - vendor/bin/phpspec run -v
 
-matrix:
-  exclude:
-    - php: hhvm
-      env: TWIG_EXT=yes
-    - php: nightly
-      env: TWIG_EXT=yes
