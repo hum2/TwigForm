@@ -1,6 +1,6 @@
 # Form Extension for Twig
 
-[![Build Status](https://travis-ci.org/hum2/twig-form.svg?branch=0.1.1)](https://travis-ci.org/hum2/twig-form)
+[![Build Status](https://travis-ci.org/hum2/twig-form.svg?branch=master)](https://travis-ci.org/hum2/twig-form)
 
 
 ## install
