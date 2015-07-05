@@ -45,6 +45,7 @@ class FormNode extends \Twig_Node
             $compiler
                 ->write('$factory   = new \Aura\Session\SessionFactory;' . "\n")
                 ->write('$session   = $factory->newInstance($_COOKIE);' . "\n")
+                ->write('$session->getCsrfToken()->regenerateValue();', "\n")
                 ->write('$csrfValue = $session->getCsrfToken()->getValue();' . "\n");
             self::$isInitialize = true;
         }
