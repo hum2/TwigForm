@@ -1,6 +1,7 @@
 # Form Extension for Twig
 
 [![Build Status](https://travis-ci.org/hum2/twig-form.svg?branch=master)](https://travis-ci.org/hum2/twig-form)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hum2/twig-form/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hum2/twig-form/?branch=master)
 
 [![Latest Stable Version](https://poser.pugx.org/hum2/twig-form/v/stable)](https://packagist.org/packages/hum2/twig-form)
 [![Total Downloads](https://poser.pugx.org/hum2/twig-form/downloads)](https://packagist.org/packages/hum2/twig-form)
