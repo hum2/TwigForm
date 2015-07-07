@@ -44,7 +44,7 @@ class FormTokenParserSpec extends ObjectBehavior
     private function getParser()
     {
         $stream = new \Twig_TokenStream(
-            [
+            array(
                 new \Twig_Token(\Twig_Token::TEXT_TYPE, '<!DOCTYPE html><html><body>', 1),
                 // form(method="post", action=request_uri|e)
                 new \Twig_Token(\Twig_Token::BLOCK_START_TYPE, '', 2),
@@ -67,7 +67,7 @@ class FormTokenParserSpec extends ObjectBehavior
                 new \Twig_Token(\Twig_Token::BLOCK_END_TYPE, '', 4),
                 new \Twig_Token(\Twig_Token::TEXT_TYPE, '</body></html>', 5),
                 new \Twig_Token(\Twig_Token::EOF_TYPE, '', 5),
-            ]
+            )
         );
         $env    = new \Twig_Environment();
         $env->addTokenParser(new FormTokenParser());
