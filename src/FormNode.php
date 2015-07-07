@@ -36,10 +36,6 @@ class FormNode extends \Twig_Node
      */
     public function compile(\Twig_Compiler $compiler)
     {
-        $html  = '<form ';
-        $args  = $this->getNode('arguments');
-        $count = count($args);
-        $pos   = 0;
         $compiler->addDebugInfo($this);
         if (!self::$isInitialize) {
             $compiler
@@ -49,18 +45,16 @@ class FormNode extends \Twig_Node
                 ->write('$csrfValue = $session->getCsrfToken()->getValue();' . "\n");
             self::$isInitialize = true;
         }
+        $html = '<form ';
+        $args = $this->getNode('arguments');
         foreach ($args as $name => $default) {
             $compiler
                 ->raw("\t\t" . '$__' . $name . '__ = ')
                 ->subcompile($default)
                 ->raw(";\n");
-
-            $html .= $name . '="{$__' . $name . '__}"';
-            if (++$pos < $count) {
-                $html .= ' ';
-            }
+            $html .= $name . '="{$__' . $name . '__}" ';
         }
-        $html .= ">\\n";
+        $html = rtrim($html, ' ') . ">\\n";
 
         $compiler
             ->write('echo "' . str_replace('"', '\"', $html) . '";' . "\n")
