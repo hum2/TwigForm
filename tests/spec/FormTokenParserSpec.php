@@ -25,18 +25,6 @@ class FormTokenParserSpec extends ObjectBehavior
     }
 
     /**
-     * TODO fix
-     *
-     * @param \Twig_Token $token
-     */
-    function it_can_parse(\Twig_Token $token)
-    {
-//        $parser = $this->getParser();
-//        $this->setParser($parser);
-//        $this->parse($token);
-    }
-
-    /**
      * @return \Twig_Parser
      * @throws \Exception
      * @throws \Twig_Error_Syntax
