@@ -11,7 +11,7 @@ class FormExtension extends \Twig_Extension
      */
     public function getTokenParsers()
     {
-        return [new FormTokenParser()];
+        return array(new FormTokenParser());
     }
 
     /**
